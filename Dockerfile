@@ -9,6 +9,8 @@ RUN npm install --quiet
 
 COPY . .
 
+COPY init.sql /docker-entrypoint-initdb.d/
+
 RUN npm run build
 
 # Production stage
